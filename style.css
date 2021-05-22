@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #fda547, #ffa8cb);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  min-height: 100vh;
+  color: white;
+}
+
+header {
+  font-size: 1.7rem;
+}
+
+header, form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input, form button {
+  padding: .5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: #ff408cdb;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #ff408cdb;
+  transform: scale(1.1);
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  min-width: 30%;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  margin: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .5s ease;
+
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn, .checked-btn {
+  background-color: #ff408cdb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem;
+
+}
+
+.trash-btn:hover {
+  color: #ff408cdb;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.checked-btn {
+  background-color: #b7da88;
+  color: white;
+}
+
+.checked-btn:hover {
+  color: #b7da88;
+  transition: 0.3s ease-in-out;
+  background-color: white;
+}
+
+.todo-item{
+  padding: .5rem;
+}
+
+.fa-trash, .fa-check {
+  pointer-events: none;      /* no effects on clicking the icons*/
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+
+.fall {
+  transform: translateY(8rem)  rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  color: #ff408cdb;
+  outline: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  width: 9.2rem;
+  padding: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bolder;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: '\25BC';
+  top: 0;
+  right: 0;
+  background-color: #ff408cdb;
+  position: absolute;
+  padding: 1rem;
+  pointer-events: none;
+  transition: .3s all ease;
+
+}
+
+
+.select:hover::after{
+  background: white;
+  color: #ff408cdb;
+  transform: scale(1.1);
+}
